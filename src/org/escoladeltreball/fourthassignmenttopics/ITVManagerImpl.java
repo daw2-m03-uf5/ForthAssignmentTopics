@@ -1,13 +1,14 @@
 /**
  * 
  */
-package org.escoladeltreball.forthassignmenttopics;
+package org.escoladeltreball.fourthassignmenttopics;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author jmendez
@@ -24,7 +25,7 @@ public class ITVManagerImpl extends ITVManager {
 	}
 
 	/* (non-Javadoc)
-	 * @see org.escoladeltreball.forthassignmenttopics.Manager#getnext()
+	 * @see org.escoladeltreball.fourthassignmenttopics.Manager#getnext()
 	 */
 	@Override
 	public ITV getNext() throws Exception {
@@ -43,6 +44,12 @@ public class ITVManagerImpl extends ITVManager {
 		List<ITV> itvsSorted = new ArrayList<>(itvs);
 		Collections.sort(itvsSorted, comparator);
 		return itvsSorted;
+	}
+
+	@Override
+	public List<ITV> from(String where) throws Exception {
+		List<ITV> ret = itvs.stream().filter(itv -> itv.getWhere().equals(where)).collect(Collectors.toList());
+		return ret;
 	}
 
 

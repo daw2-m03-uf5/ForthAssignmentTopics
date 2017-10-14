@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.escoladeltreball.forthassignmenttopics;
+package org.escoladeltreball.fourthassignmenttopics;
 
 import java.util.Comparator;
 

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.escoladeltreball.forthassignmenttopics;
+package org.escoladeltreball.fourthassignmenttopics;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -9,6 +9,8 @@ import java.time.LocalTime;
 
 /**
  * @author jmendez
+ * 
+ * Natural order
  *
  */
 public class ITV implements Comparable<ITV> {
