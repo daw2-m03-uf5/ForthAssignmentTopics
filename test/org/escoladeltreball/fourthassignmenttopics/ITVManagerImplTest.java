@@ -64,7 +64,10 @@ public class ITVManagerImplTest {
 	 */
 	@Test
 	public final void testGetNext() throws Exception {
-		assertEquals(new ITV(5333244, "3444gff", LocalDateTime.parse("16/10/2017 11:15:00", DateTimeFormatter.ofPattern("dd/MM/yyy HH:mm:ss")), "terrassa"),
+		assertEquals(new ITV(5333244, "3444gff", 
+				LocalDateTime.parse("16/10/2017 11:15:00", 
+						DateTimeFormatter.ofPattern("dd/MM/yyy HH:mm:ss")), 
+				"terrassa"),
 				manager.getNext());
 		assertEquals(5333244, manager.getNext().getId());
 	}
@@ -75,7 +78,8 @@ public class ITVManagerImplTest {
 	 */
 	@Test
 	public final void testSort() throws Exception {
-		List<ITV> sortedByWhere = manager.sort((itv1, itv2) -> itv1.getWhere().compareTo(itv2.getWhere()));
+		List<ITV> sortedByWhere = 
+				manager.sort((itv1, itv2) -> itv1.getWhere().compareTo(itv2.getWhere()));
 		assertTrue(sortedByWhere.get(0).getWhere().equals("badalona"));
 		assertTrue(sortedByWhere.get(sortedByWhere.size() - 1).getWhere().equals("terrassa"));
 	}

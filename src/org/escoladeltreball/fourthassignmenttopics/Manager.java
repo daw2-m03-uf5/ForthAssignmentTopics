@@ -3,6 +3,7 @@
  */
 package org.escoladeltreball.fourthassignmenttopics;
 
+import java.time.LocalDateTime;
 import java.util.Comparator;
 import java.util.List;
 
@@ -36,5 +37,15 @@ public interface Manager {
 	 * @throws Exception when where is null
 	 */
 	public abstract List<ITV> from(String where) throws Exception;
+	
+	/**
+	 * This method returns a list of ITV's ranging from ini to fin
+	 * 
+	 * @param ini Initial date
+	 * @param fin Final date
+	 * @return A list with ITV's in the range
+	 * @throws Exception When empty
+	 */
+	public abstract List<ITV> from(LocalDateTime ini, LocalDateTime fin) throws Exception;
 	
 }

@@ -52,5 +52,11 @@ public class ITVManagerImpl extends ITVManager {
 		return ret;
 	}
 
+	@Override
+	public List<ITV> from(LocalDateTime ini, LocalDateTime fin) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }
